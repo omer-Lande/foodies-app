@@ -3,7 +3,12 @@ import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  if (!meal) {
+    notFound();
+  }
+
+  const params = await props.params;
   const meal = getMeal(params.slug);
   return {
     title: meal.title,
@@ -14,10 +19,6 @@ export async function generateMetadata({ params }) {
 export default async function MealDetailsPage(props) {
   const params = await props.params;
   const meal = getMeal(params.slug);
-
-  if (!meal) {
-    notFound();
-  }
 
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
 
