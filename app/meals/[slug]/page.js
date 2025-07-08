@@ -4,12 +4,12 @@ import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata(props) {
+  const params = await props.params;
+  const meal = getMeal(params.slug);
   if (!meal) {
     notFound();
   }
 
-  const params = await props.params;
-  const meal = getMeal(params.slug);
   return {
     title: meal.title,
     description: meal.summary,
