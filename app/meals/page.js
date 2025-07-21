@@ -3,6 +3,7 @@ import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
+import ShareButton from "@/components/meals/ShareButton";
 
 export const metadata = {
   title: "All Meals",
@@ -26,7 +27,7 @@ export default function MealsPage() {
           Choose your favorite recipe and cook it yourself. It is easy and fun!
         </p>
         <p className={classes.cta}>
-          <Link href="/meals/share">Share Your Favorite Recipe</Link>
+          <ShareButton className={classes.link} />
         </p>
       </header>
       <main className={classes.main}>

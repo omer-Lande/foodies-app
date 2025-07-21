@@ -41,3 +41,23 @@
   object-fit: contain;
   filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
 }
+
+.link {
+  text-decoration: none;
+  color: #ddd6cb;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05rem;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.link:hover,
+.link:focus {
+  color: #f5cb5c;
+  outline: none;
+}

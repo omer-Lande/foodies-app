@@ -33,6 +33,27 @@
   text-decoration: none;
 }
 
+.link,
+.cta button {
+  text-decoration: none;
+  color: #f5cb5c; /* or your link color */
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05rem;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.link:hover,
+.cta button:hover {
+  color: #fff; /* or your hover color */
+}
+
 .loading {
   text-align: center;
   animation: loading 1.2s ease-in-out infinite;
